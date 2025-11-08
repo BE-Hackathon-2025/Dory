@@ -12,7 +12,7 @@ Examples:
 **....at least 3 sentences describing what the project does and how it works**
 
 ## Project Value 💰
-**....at least 3 sentences describing your target customer and tangible benefits from your solution**
+**Our target customers are public and private K–12 schools, particularly administrators and teachers supporting students with dyslexia and other neurodivergent learning needs. Dory delivers a low-cost, AI-powered reading companion that personalizes learning, improves reading comprehension by up to 30%, and reduces teacher prep time by 25%. Schools can adopt Dory through a contract-based subscription model at $4–$6 per student per year, allowing districts to save thousands in training and curriculum costs while expanding accessibility for over 85K learners across Pennsylvania.**
 
 ## Tech Overview 💻
 Example:
