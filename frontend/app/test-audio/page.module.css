@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.logo {
+  width: 80px;           
+  height: 80px;          
+  object-fit: contain;    
+  image-rendering: crisp-edges; 
+}
+
+
+.title {
+  font-size: 2rem;
+  color: #69AAFD; /* dory blue */
+  font-weight: bold;
+}
+
+.uploadBox {
+  width: 60%;
+  border: 2px dashed #999;
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.uploadText {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.uploadIcons {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* space between icons */
+}
+
+.uploadIcons :global(svg) {
+  width: 60px;       /* icon size */
+  height: 60px;
+  color: #69AAFD;    /* dory blue */
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.uploadIcons :global(svg:hover) {
+  transform: scale(1.2);
+  color: #69AAFD; /* slightly lighter blue on hover */
+}
+
+.contentDisplay {
+  width: 60%;
+  min-height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button {
+  background-color: #69AAFD; /* dory blue */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #69AAFD;
+  transform: scale(1.05);
+}
