@@ -54,7 +54,7 @@ Unlike traditional accessibility tools, Dory emphasizes **real-time audio intera
 ---
 
 ## 📽 Demo Presentation  
-🎥 [Add your Canva or PowerPoint link here]
+🎥 [https://www.canva.com/design/DAG4EFUb9-4/Y8BP-8DFS1OMc9WyzANM2A/edit?utm_content=DAG4EFUb9-4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton]
 
 ---
 
