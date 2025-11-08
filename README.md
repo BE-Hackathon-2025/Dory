@@ -45,11 +45,14 @@ Unlike traditional accessibility tools, Dory emphasizes **real-time audio intera
 ---
 
 ## 💻 Tech Overview  
-- Next.js  
+- Next.js
+- FastAPI / Python 
 - JavaScript  
 - TailwindCSS  
 - Gemini Studios AI  
-- Zustand  
+- Zustand
+- Vercel
+- Render  
 
 ---
 
