@@ -14,6 +14,10 @@ export const usePersonalize = create(
         dyslexiaResponse: null,
       },
       setProfile: (patch) => set((s) => ({ profile: { ...s.profile, ...patch } })),
+
+      draftText: '',
+      setDraftText: (t) => set({ draftText: t }),
+      clearDraftText: () => set({ draftText: '' }),
     }),
     {
       name: 'dory-profile',
