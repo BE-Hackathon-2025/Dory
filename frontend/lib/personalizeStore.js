@@ -16,7 +16,7 @@ export const usePersonalize = create(
       setProfile: (patch) => set((s) => ({ profile: { ...s.profile, ...patch } })),
     }),
     {
-      name: 'dory-profile', // key for localStorage
+      name: 'dory-profile',
     }
   )
 );
