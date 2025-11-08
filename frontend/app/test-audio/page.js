@@ -14,7 +14,6 @@ export default function StudentPage() {
   const [error, setError] = useState('');
   const [result, setResult] = useState(null);
 
-  // speaking state (local UI booleans)
   const [speakingOriginal, setSpeakingOriginal] = useState(false);
   const [speakingSummary, setSpeakingSummary] = useState(false);
 
@@ -22,7 +21,6 @@ export default function StudentPage() {
 
   useEffect(() => {
     return () => {
-      // cleanup on unmount
       if (controllerRef.current) {
         controllerRef.current.abort();
         controllerRef.current = null;
@@ -31,34 +29,28 @@ export default function StudentPage() {
     };
   }, []);
 
-  // ===== personalization-derived values =====
-  const bgColor = profile?.background?.color ?? null; // e.g. '#F7F3E8' or null
+  const bgColor = profile?.background?.color ?? null; 
   const dyslexiaOn = profile?.font === 'OpenDyslexic';
   const motionOff = Boolean(profile?.reducedMotion);
 
-  // fontFamily (uses CSS vars injected by next/font.local or falls back to system)
   const fontFamily = useMemo(() => {
     return dyslexiaOn
       ? 'var(--font-open-dyslexic), var(--font-geist-sans), system-ui, -apple-system, "Segoe UI", Roboto'
       : 'var(--font-geist-sans), system-ui, -apple-system, "Segoe UI", Roboto';
   }, [dyslexiaOn]);
 
-  // page-level style: apply selected background if available
   const pageStyle = useMemo(() => {
     if (!bgColor) return undefined;
     return { backgroundColor: bgColor };
   }, [bgColor]);
 
-  // textarea/result inline style
   const readerStyle = useMemo(() => ({
     fontFamily,
-    // sensible defaults for dyslexia mode spacing
     letterSpacing: dyslexiaOn ? '0.01em' : undefined,
     lineHeight: dyslexiaOn ? 1.8 : 1.6,
     color: '#111827',
   }), [fontFamily, dyslexiaOn]);
 
-  // ===== networking / summarize logic (unchanged except pulse respect) =====
   const BACKEND_URL = process.env.NEXT_PUBLIC_SUMMARIZE_URL || '/api/summarize';
 
   const handleSummarize = async () => {
@@ -134,7 +126,6 @@ export default function StudentPage() {
     }
   };
 
-  // Speak the original text (draftText)
   const handleReadOriginal = () => {
     const text = (draftText || '').trim();
     if (!text) {
@@ -142,7 +133,6 @@ export default function StudentPage() {
       return;
     }
 
-    // If already speaking, stop everything
     if (isSpeaking()) {
       stopSpeech();
       setSpeakingOriginal(false);
@@ -163,7 +153,6 @@ export default function StudentPage() {
     );
   };
 
-  // Speak the simplified summary (result)
   const handleReadSummary = () => {
     const text = result?.simplified_text || result?.summary || '';
     if (!text || !text.trim()) {
@@ -192,17 +181,12 @@ export default function StudentPage() {
   };
 
   return (
-    // apply the selected page background color (fallback to default CSS class)
     <main className="min-h-screen" style={pageStyle}>
       <div className="max-w-3xl mx-auto px-6 py-12">
-        {/* Input Card */}
         <div className="flex flex-col items-center">
-          {/* Paste box + controls */}
           <div className="w-full max-w-2xl">
-            {/* apply font to the container so controls/labels also reflect choice */}
             <div className="border rounded-md bg-white shadow-sm p-0" style={{ fontFamily }}>
-              {/* Controlled textarea */}
-              <textarea
+\              <textarea
                 value={draftText}
                 onChange={(e) => setDraftText(e.target.value)}
                 placeholder="Paste your content here"
@@ -212,15 +196,12 @@ export default function StudentPage() {
                 style={readerStyle}
               />
 
-              {/* control row */}
               <div className="flex items-center justify-between px-3 py-2 border-t">
                 <div className="flex items-center gap-3 text-gray-700">
-                  {/* mic (visual) */}
                   <button className="text-gray-700 p-2" title="Voice (disabled)">
                     <MicrophoneIcon className="h-5 w-5" />
                   </button>
 
-                  {/* upload (visual) */}
                   <button
                     type="button"
                     aria-label="Upload"
@@ -231,7 +212,6 @@ export default function StudentPage() {
                   </button>
                 </div>
 
-                {/* Summarize button (respect reduced-motion) */}
                 <div className="flex items-center gap-2">
                   <button
                     type="button"
@@ -252,7 +232,6 @@ export default function StudentPage() {
             </div>
           </div>
 
-          {/* Action buttons row */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 w-full max-w-2xl mt-8" style={{ fontFamily }}>
             <button
               type="button"
