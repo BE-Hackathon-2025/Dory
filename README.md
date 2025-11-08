@@ -1,6 +1,5 @@
 ### TL;DR 🚨 
-# Project Name
-## Dory
+# Dory
 
 ## Challenge Statement(s) Addressed 🎯
 **...include the challenge statement(s) the project worked to address**
