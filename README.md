@@ -3,7 +3,7 @@
 ---
 
 ## 🎯 Challenge Statement(s) Addressed  
-We focused on tackling **learning accessibility challenges for students with dyslexia**, using AI to create a more inclusive and personalized experience.  
+We focused on tackling **learning accessibility challenges for students with learning difficulties**, using AI to create a more inclusive and personalized experience.  
 
 - How might we design tools that make reading and auditory content more accessible and engaging for people with dyslexia?  
 - How might we leverage AI to reduce cognitive load and personalize learning for neurodivergent users?  
