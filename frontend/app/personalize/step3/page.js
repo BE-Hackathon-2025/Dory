@@ -101,7 +101,7 @@ export default function Step3() {
         <section className="bg-doryblue text-white rounded-3xl p-10 shadow-lg space-y-8">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-semibold">Let’s find the background that feels best for your eyes</h2>
-            <SpeakerButton text="What background feels easier to read?" />
+            <SpeakerButton text="Let’s find the background that feels best for your eyes" />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
